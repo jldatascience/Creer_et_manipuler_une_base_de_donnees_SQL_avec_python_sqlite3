@@ -15,6 +15,14 @@ SQLite supporte le standard SQL, ce qui signifie que les développeurs peuvent u
 
 
 
+## Architecture de SQLite : Base de données orientée en ligne
+
+Les lignes d'une table sont sauvegardées de manière contiguë en mémoire.
+Cela permet d'insérer ou de supprimer facilement des enregistrements.
+Revers de la médaille, il est plus coûteux de faire du calcul sur une colonne entière, car cela nécessite de parcourir l'ensemble des lignes. Ces bases de données sont optimisées pour le transactionnel et sont utilisées pour des système OLTP (OnLine Transactional Processing), par exemple une base de données de production gérant des utilisateurs.
+
+
+
 ## Ensemble de données
 
 Je crée directement la base de données SQLite dans le notebook ci-joint.
